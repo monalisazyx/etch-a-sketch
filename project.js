@@ -16,3 +16,17 @@ for(let j = 0; j < 16 ; j++){  //loop for the rows
 
 }
 
+const col = document.querySelectorAll('.column');
+//let drawing = false;
+col.forEach((column) => {
+    column.addEventListener('mouseenter' , () => {
+        column.style.backgroundColor = '#9068be';
+
+    });
+   
+    column.addEventListener('mouseup' , () => {
+        column.style.backgroundColor = '#9068be';
+
+    });
+    
+});
