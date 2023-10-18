@@ -1,0 +1,16 @@
+.column {
+
+    height: 10px;
+    width: 10px;
+    background-color: rgb(255, 0, 119);
+    margin: 1px;
+    padding: 2px;
+
+}
+
+.row {
+    display: flex;
+
+    gap: 1px;
+}
+
