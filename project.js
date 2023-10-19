@@ -1,9 +1,13 @@
 let container = document.querySelector('#container');
+let btn = document.querySelector('button');
+btn.addEventListener('click', () => {
+ while(container.firstChild){
+    container.removeChild(container.firstChild);
+ }
+ let x = Number(prompt('num: '));
+ let cellSize = 600/x;
 
-let x = Number(prompt('num: '));
-let cellSize = 600/x;
-
-for(let j = 0; j < x ; j++){  //loop for the rows
+ for(let j = 0; j < x ; j++){  //loop for the rows
     let row = document.createElement('div');    //create a row
     row.classList.add('row');
     for(let i = 0; i < x ; i++ ){   //loop for the columns
@@ -19,9 +23,9 @@ for(let j = 0; j < x ; j++){  //loop for the rows
 
 }
 
-const col = document.querySelectorAll('.column');
+ const col = document.querySelectorAll('.column');
 //let drawing = false;
-col.forEach((column) => {
+ col.forEach((column) => {
     column.addEventListener('mouseenter' , () => {
         column.style.backgroundColor = '#9068be';
 
@@ -32,4 +36,6 @@ col.forEach((column) => {
 
     });
     
+ });
+
 });
